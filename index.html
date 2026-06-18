@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FD Calculator</title>
+
+    <style>
+        .calculator {
+            border: 2px solid blueviolet;
+            width: 500px;
+            margin: auto;
+            padding: 20px;
+            background-color: bisque;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .input {
+            margin: 15px 0;
+            padding: 10px;
+            background-color: lightblue;
+        }
+
+        label {
+            display: inline-block;
+            width: 120px;
+        }
+
+        .output {
+            margin-top: 20px;
+            font-size: 18px;
+            padding: 10px;
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="calculator">
+        <h1>FD Calculator</h1>
+
+        <div class="input">
+            <label for="investment">Investment</label>
+            <input type="range" id="investment"
+                   min="1000" max="100000"
+                   step="1000" value="10000">
+            <span id="investment-value">10,000</span>
+        </div>
+
+        <div class="input">
+            <label for="rate">Interest Rate</label>
+            <input type="range" id="rate"
+                   min="1" max="18"
+                   step="0.1" value="6.5">
+            <span id="interest-value">6.5%</span>
+        </div>
+
+        <div class="input">
+            <label for="time">Time Period</label>
+            <input type="range" id="time"
+                   min="1" max="30"
+                   step="1" value="5">
+            <span id="timeperiod">5</span> Years
+        </div>
+
+        <button onclick="calculator()">Invest Now</button>
+
+        <div class="output">
+            <p>Investment Amount: <span id="investamount">---</span></p>
+            <p>Estimated Returns: <span id="estimatedreturns">---</span></p>
+            <p>Total Amount: <span id="totalvalue">---</span></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
